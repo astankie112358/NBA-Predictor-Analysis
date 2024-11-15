@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48ab6b35-030f-458d-a636-9f9f19cdf67b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/NBA_Predictor.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="48ab6b35-030f-458d-a636-9f9f19cdf67b" name="Changes" comment="First version. Working getting data for selected year.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="add_basketballreference_api_connection" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -41,22 +41,33 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.BasketballReferenceAPI.executor": "Run",
     "Python.Main.executor": "Run",
     "Python.box_scores.executor": "Debug",
     "Python.seasons.executor": "Run",
     "Python.utils.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Adam/NBA_Predictor/NBA_Predictor/.venv",
+    "last_opened_file_path": "D:/Users/Adam/PycharmProjects/NBA_Analysis-Predictor",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\Adam\PycharmProjects\" />
+      <recent name="D:\Users\Adam\PycharmProjects\NBA_Predictor" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Users\Adam\PycharmProjects" />
+      <recent name="d:\Users\Adam\NBA_Predictor" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,12 +88,34 @@
       <workItem from="1731156837081" duration="2604000" />
       <workItem from="1731159492701" duration="163000" />
       <workItem from="1731423323258" duration="1238000" />
-      <workItem from="1731492402063" duration="4596000" />
+      <workItem from="1731492402063" duration="8601000" />
+      <workItem from="1731518740426" duration="1647000" />
+      <workItem from="1731520723406" duration="5783000" />
+      <workItem from="1731535490252" duration="3502000" />
+      <workItem from="1731697663141" duration="1873000" />
+      <workItem from="1731710869579" duration="122000" />
+      <workItem from="1731711078833" duration="187000" />
+      <workItem from="1731711680539" duration="28000" />
+      <workItem from="1731712002166" duration="100000" />
+      <workItem from="1731712235553" duration="418000" />
     </task>
+    <task id="LOCAL-00001" summary="First version. Working getting data for selected year.">
+      <option name="closed" value="true" />
+      <created>1731500874424</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731500874424</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First version. Working getting data for selected year." />
+    <option name="LAST_COMMIT_MESSAGE" value="First version. Working getting data for selected year." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -95,9 +128,10 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/NBA_Predictor$Main.coverage" NAME="Main Coverage Results" MODIFIED="1731500526825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
+    <SUITE FILE_PATH="coverage/NBA_Predictor$Main.coverage" NAME="Main Coverage Results" MODIFIED="1731500719088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NBA_Predictor$box_scores.coverage" NAME="box_scores Coverage Results" MODIFIED="1731155746486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/basketball_reference_scraper" />
     <SUITE FILE_PATH="coverage/NBA_Predictor$seasons.coverage" NAME="seasons Coverage Results" MODIFIED="1731497460784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/basketball_reference_scraper" />
+    <SUITE FILE_PATH="coverage/NBA_Predictor$BasketballReferenceAPI.coverage" NAME="BasketballReferenceAPI Coverage Results" MODIFIED="1731702976096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NBA_Predictor$utils.coverage" NAME="utils Coverage Results" MODIFIED="1731155915379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/basketball_reference_scraper" />
   </component>
 </project>
