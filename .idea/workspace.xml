@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="48ab6b35-030f-458d-a636-9f9f19cdf67b" name="Changes" comment="First version. Working getting data for selected year.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="48ab6b35-030f-458d-a636-9f9f19cdf67b" name="Changes" comment="First version. Working getting data for selected year." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +15,14 @@
       <list>
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="add_basketballreference_api_connection" />
+    <option name="OPTIONS">
+      <set>
+        <option value="SQUASH" />
+      </set>
     </option>
   </component>
   <component name="Git.Settings">
@@ -47,7 +53,7 @@
     "Python.seasons.executor": "Run",
     "Python.utils.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "add__basketballreference__api__connection",
     "last_opened_file_path": "D:/Users/Adam/PycharmProjects/NBA_Analysis-Predictor",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -112,6 +118,23 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First version. Working getting data for selected year." />
