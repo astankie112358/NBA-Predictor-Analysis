@@ -24,7 +24,7 @@ class BasketballReferenceAPI:
         return box_score, game_id
 
     def get_season_box_scores(self, season):
-        schedule = pd.DataFrame.from_dict(get_schedule(season, True))
+        schedule = pd.DataFrame.from_dict(get_schedule(season, False))
         box_score = pd.DataFrame()
         for index, game in schedule.iterrows():
             print('Game: ' + str(index + 1) + ' out of ' + str(len(schedule) + 1))
@@ -43,8 +43,11 @@ class BasketballReferenceAPI:
         files=[file.replace('.csv','') for file in files]
         schedule.drop(schedule[schedule['GAME_ID'].isin(files)].index, inplace=True)
         box_score = pd.DataFrame()
+        first_game_flag=0
         for index, game in schedule.iterrows():
-            print('Game: ' + str(index + 1) + ' out of ' + str(len(schedule) + 1))
+            if first_game_flag == 0:
+                first_game_flag=index
+            print('Game: ' + str(index-first_game_flag + 1) + ' out of ' + str(len(schedule) + 1))
             new_box_score = self.get_game(game['DATE'], game['HOME'], game['VISITOR'])[0]
             box_score = pd.concat([box_score, new_box_score])
             box_score.to_csv(path + game['GAME_ID'] + '.csv')
@@ -52,4 +55,5 @@ class BasketballReferenceAPI:
 
 
 basketball_reference_api = BasketballReferenceAPI()
-basketball_reference_api.get_season_box_scores_separtate_file(2023, 'D:\\Users\\Adam\\PycharmProjects\\NBA_GAMES\\')
+basketball_reference_api.get_season_box_scores_separtate_file(2022, 'D:\\Users\\Adam\\PycharmProjects\\NBA_GAMES\\')
+basketball_reference_api.get_season_box_scores_separtate_file(2021, 'D:\\Users\\Adam\\PycharmProjects\\NBA_GAMES\\')
