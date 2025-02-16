@@ -15,20 +15,20 @@ class DatabaseLoader:
         db_name = 'NBA_Analysis'
         self.engine = create_engine(f'postgresql://{db_username}:{db_password}@{db_host}:{db_port}/{db_name}')
     def get_files_to_load(self,path):
-        files = os.listdir(path)
-        for file_name in files:
-            file=pandas.read_csv(path+'\\'+file_name,low_memory=False)
-            with self.engine.connect() as connection:
+        with self.engine.connect() as connection:
+            files = os.listdir(path)
+            for file_name in files:
+                file=pandas.read_csv(path+'\\'+file_name,low_memory=False)
                 transaction = connection.begin()
+                if 'Unnamed: 16_level_1' in file.columns:
+                    file.drop(columns=['Unnamed: 16_level_1'], inplace=True)
                 try:
                     file.to_sql('stg_Boxscores', connection, if_exists='append', index=False, schema='stg',index_label='id')
                     transaction.commit()
-                except:
+                except Exception as e:
                     transaction.rollback()
-                    raise
-            break
-
+                    print(e)
 
 databaseLoader = DatabaseLoader()
-databaseLoader.get_files_to_load('D:\\Users\\Adam\\PycharmProjects\\NBA_GAMES\\2023')
+databaseLoader.get_files_to_load('D:\\Users\\Adam\\PycharmProjects\\NBA_GAMES\\2022')
 
